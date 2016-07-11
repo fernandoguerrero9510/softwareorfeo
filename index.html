@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <title>EXPRESS  ANGULAR 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+ <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!--ipt src="node_modules/angular2/src/platform/browser_common.js"></script> -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    
+     
+    <script>
+        System.config({
+             map: {
+                "@angular": "node_modules/@angular",
+                "rxjs": "node_modules/rxjs"
+            },
+            packages: {
+                 '/': {
+                    format: 'register',
+                    defaultExtension: 'js'
+                },
+              'node_modules/@angular/http': {
+                    //format: 'cjs',
+                    defaultExtension: 'js',
+                    main: 'http.js'
+                },
+                'node_modules/@angular/core': {
+                    //format: 'cjs',
+                    defaultExtension: 'js',
+                    main: 'index.js'
+                },
+                'node_modules/@angular/router': {
+                    //format: 'cjs',
+                    defaultExtension: 'js',
+                    main: 'index.js'
+                },
+                'node_modules/@angular/router-deprecated': {
+                    //format: 'cjs',
+                    defaultExtension: 'js',
+                    main: 'index.js'
+                },
+                'node_modules/@angular/platform-browser-dynamic': {
+                    //format: 'cjs',
+                    defaultExtension: 'js',
+                    main: 'index.js'
+                },
+                'node_modules/@angular/platform-browser': {
+                    //format: 'cjs',
+                    defaultExtension: 'js',
+                    main: 'index.js'
+                },
+                'node_modules/@angular/compiler': {
+                    //format: 'cjs',
+                    defaultExtension: 'js',
+                    main: 'compiler.js'
+                },
+                'node_modules/@angular/common': {
+                    //format: 'cjs',
+                    defaultExtension: 'js',
+                    main: 'index.js'
+                },
+                'node_modules/angular2/platform/browser': {
+                    //format: 'cjs',
+                    defaultExtension: 'js',
+                    main: 'browser.js'
+                },
+             'rxjs' : {
+                    defaultExtension: 'js'
+                } 
+            }
+        });
+      System.import('./app/boot').catch(function(err){ console.error(err);  });
+    </script>
+  </head>
+  
+  <body>
+     <div class="container">
+        <my-app>Espere un momento... Estamos trabajando</my-app>
+     </div>
+  </body>
+</html>
